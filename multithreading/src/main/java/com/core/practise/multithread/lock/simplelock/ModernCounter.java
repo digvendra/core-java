@@ -7,8 +7,12 @@ public class ModernCounter {
 	
 	public int inc() throws InterruptedException {
 			lock.lock();
-			int result = ++counter;
-			lock.unLock();
+			int result = counter;
+			try {
+				result = ++counter;
+			} finally {
+				lock.unLock();
+			}
 			return result;
 	}
 
