@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Test {
+public class TestCollect {
 
   public static void main(String[] args) {
     List<Integer> l = new ArrayList<Integer>();
